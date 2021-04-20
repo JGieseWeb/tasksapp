@@ -23,4 +23,18 @@ html {
 
 body {
   margin: 0;
+  background-color: var(--primary-text);
 }
+h3 {
+  color: var(--secondary-text);
+}
+.headline {
+  font-size: 3em;
+  color: #393939;
+}
+.all-together {
+    display: grid;
+  grid-auto-flow: row ;
+  
+}
+input[type="submit"]{bla}
