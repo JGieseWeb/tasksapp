@@ -12,6 +12,9 @@
   --primary-text: #ffffff;
   --secondary-text: #111111;
   --headline: #393939;
+
+  --primary-font-family: "Monserat", sans-serif;
+  --secundary-font-family: "Roboto", sans-serif;
 }
 
 html {
