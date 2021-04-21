@@ -4,46 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>New Task</title>
   </head>
   <body>
-    <form class="form">
-      <h2 class="headline">Add New</h2>
-
-      <input type="text" placeholder="Enter Task" class="input__text" />
-      <h3>When</h3>
-      <div class="radio-group">
+    <form class="form-dash">
+      <section>
+        <button><img src="./img/Cartot menu.png" alt="" /></button>
+      </section>
+      <section>
+        <h2>Tasks</h2>
+        <button><img src="./img/bell.svg" alt="" /></button>
+        <img src="#" alt="" />
+      </section>
+      <section class="radio-group__dash">
         <label>
-          Today
           <input
             type="radio"
-            name="same"
-            value="today"
-            class="radio-group__input"
+            name="week"
+            value="thisWeek"
+            class="radio-group__this-week"
           />
         </label>
+        <span>This week</span>
         <label>
-          Tomorrow
           <input
             type="radio"
-            name="same"
+            name="week"
             value="tomorrow"
-            class="radio-group__input"
-          />
-        </label>
+            class="radio-group__tomorrow"
+        /></label>
+        <span>Tomorrow</span>
         <label>
-          Select date
           <input
             type="radio"
-            name="same"
-            value="selectDate"
-            class="radio-group__input"
-          />
-        </label>
-      </div>
-      <div>
-        <div class="checklist">
+            name="week"
+            value="today"
+            class="radio-group__today"
+        /></label>
+        <span>Today</span>
+      </section>
+      <div class="checklist">
+        <div>
           <input type="checkbox" id="book" name="book" />
           <label for="book">Book appointment with</label>
         </div>
@@ -63,8 +65,8 @@
           <input type="checkbox" id="jared" name="jared" />
           <label for="book">Attended UX conference with Jared</label>
         </div>
+        <button><img src="./img/Plus.png" /></button>
       </div>
     </form>
-    <input type="submit" value="Add Task" class="form__submit" />
   </body>
 </html>
