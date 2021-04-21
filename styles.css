@@ -8,7 +8,7 @@
 
 :root {
   --main-bg-color: #fe4775;
-  --secondary-color: #161060;
+  --primary-color: #161060;
   --primary-text: #ffffff;
   --secondary-text: #111111;
   --headline: #393939;
@@ -23,18 +23,47 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
   background-color: var(--primary-text);
 }
 h3 {
   color: var(--secondary-text);
 }
 .headline {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #393939;
 }
-.all-together {
-    display: grid;
-  grid-auto-flow: row ;
-  
+
+.form {
+  display: grid;
+  height: 100%;
+  position: relative;
+  align-content: center;
+  grid-template-rows: 17em 5em 3em 4em 2fr 6em;
+  margin-left: 1em;
 }
-input[type="submit"]{bla}
+.form__submit {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--main-bg-color);
+  color: var(--primary-text);
+  border: none;
+  font-size: 1.4em;
+  padding: 1.3em 2em;
+}
+.input__text {
+  font-size: 2.5em;
+  border-bottom: 1em #fe4775;
+}
+.radio-group__input {
+  opacity: 0;
+}
+.form__input {
+  font-size: 2.5em;
+  border-bottom: 1em #fe4775;
+  width: 100%;
+}
+.form__input::placeholder {
+  opacity: 0.4;
+}

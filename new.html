@@ -8,22 +8,42 @@
     <title>New Task</title>
   </head>
   <body>
-    <section class="all-together">
-      <form action="">
-        <h2 class="headline">Add New</h2>
+    <form class="form">
+      <h2 class="headline">Add New</h2>
 
-        <input type="text" placeholder="Enter Task" />
-        <h3>When</h3>
-
-        <label> Today <input type="radio" name="same" value="today" /> </label>
+      <input type="text" placeholder="Enter Task" class="input__text" />
+      <h3>When</h3>
+      <div class="radio-group">
         <label>
-          Tomorrow <input type="radio" name="same" value="tomorrow" />
+          Today
+          <input
+            type="radio"
+            name="same"
+            value="today"
+            class="radio-group__input"
+          />
         </label>
         <label>
-          Select date <input type="radio" name="same" value="selectDate" />
+          Tomorrow
+          <input
+            type="radio"
+            name="same"
+            value="tomorrow"
+            class="radio-group__input"
+          />
         </label>
-        <input type="submit" value="Add Task" />
-      </form>
-    </section>
+        <label>
+          Select date
+          <input
+            type="radio"
+            name="same"
+            value="selectDate"
+            class="radio-group__input"
+          />
+        </label>
+      </div>
+      <div></div>
+    </form>
+    <input type="submit" value="Add Task" class="form__submit" />
   </body>
 </html>
