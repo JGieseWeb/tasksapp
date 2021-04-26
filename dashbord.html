@@ -5,68 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="stylesheet" href="var.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section class="main-dash">
-      <section>
-        <button><img src="./img/Cartot menu.png" alt="" /></button>
-      </section>
-      <section class="main-dash__header">
-        <h2>Tasks</h2>
-        <button><img src="./img/bell.svg" alt="" /></button>
-        <img src="#" alt="" />
-      </section>
-      <section class="radio-group__dash">
+    <main class="layout">
+      <!-- START Burger menu -->
+
+      <input id="burger" class="burger" type="checkbox" />
+
+      <!-- START Navigation Toggle -->
+      <nav class="nav">
+        <h3 class="nav__title">Task app</h3>
+        <label class="nav__label" for="burger"
+          ><img src="/img/times-solid.svg" alt="" class="nav__closeimg"
+        /></label>
+        <ul class="nav__list nav__list--big">
+          <li><a href="/dashboard.html">Dashboard</a></li>
+          <li><a href="#">Calender</a></li>
+          <li><a href="#">Categorize Tasks</a></li>
+          <li><a href="#">Setting</a></li>
+        </ul>
+        <ul class="nav__list nav__list--small">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">License</a></li>
+        </ul>
+      </nav>
+      <!-- END Navigation Toggle -->
+
+      <label for="burger">
+        <img src="/img/list.svg" alt="" class="layout__burger-menu" />
+      </label>
+
+      <!-- END Burger menu -->
+
+      <h2 class="layout__header">Tasks</h2>
+      <button class="layout__notifications">
+        <img src="/img/bell.svg" alt="" />
+      </button>
+
+      <!-- START Radio block -->
+      <section class="date-selector-group">
         <label>
-          <input
-            type="radio"
-            name="week"
-            value="thisWeek"
-            class="radio-group__this-week"
-          />
+          <input type="radio" name="date" class="radio-group__input" />
+          <span class="radio-group__title">This Week</span>
         </label>
-        <span>This week</span>
         <label>
-          <input
-            type="radio"
-            name="week"
-            value="tomorrow"
-            class="radio-group__tomorrow"
-        /></label>
-        <span>Tomorrow</span>
+          <input type="radio" name="date" class="radio-group__input" />
+          <span class="radio-group__title">Tommorow</span>
+        </label>
         <label>
-          <input
-            type="radio"
-            name="week"
-            value="today"
-            class="radio-group__today"
-        /></label>
-        <span>Today</span>
+          <input type="radio" name="date" class="radio-group__input" />
+          <span class="radio-group__title">Today</span>
+        </label>
       </section>
-      <div class="checklist">
-        <div>
-          <input type="checkbox" id="book" name="book" />
-          <label for="book">Book appointment with</label>
-        </div>
-        <div>
-          <input type="checkbox" id="upload" name="upload" />
-          <label for="book">Upload today shot on Dribble</label>
-        </div>
-        <div>
-          <input type="checkbox" id="complete" name="complete" />
-          <label for="book">Complete the Elephant Illustration</label>
-        </div>
-        <div>
-          <input type="checkbox" id="buy" name="buy" />
-          <label for="book">Buy Cake for Clair's Birthday</label>
-        </div>
-        <div>
-          <input type="checkbox" id="jared" name="jared" />
-          <label for="book">Attended UX conference with Jared</label>
-        </div>
-        <button><img src="./img/Plus.png" /></button>
-      </div>
-    </section>
+      <!-- END Radio block -->
+
+      <!-- START Checkbox block -->
+      <section class="tasks-group">
+        <label>
+          <input type="checkbox" class="tasks-group__input" checked />
+          <span class="tasks-group__task">Book appointment with</span>
+        </label>
+        <label>
+          <input type="checkbox" class="tasks-group__input" />
+          <span class="tasks-group__task">Upload today shot on Dribble</span>
+        </label>
+        <label>
+          <input type="checkbox" class="tasks-group__input" />
+          <span class="tasks-group__task"
+            >Complete the Elephant Illustration</span
+          >
+        </label>
+        <label>
+          <input type="checkbox" class="tasks-group__input" />
+          <span class="tasks-group__task">Buy Cake for Clair's Birthday</span>
+        </label>
+        <label>
+          <input type="checkbox" class="tasks-group__input" />
+          <span class="tasks-group__task">Attend UX Conference with jared</span>
+        </label>
+      </section>
+      <!-- END Checkbox blocks -->
+
+      <a class="layout__new-task" href="/new.html"
+        ><img src="/img/Plus.png" alt=""
+      /></a>
+    </main>
   </body>
 </html>
