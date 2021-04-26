@@ -5,66 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>New Task</title>
+
+    <title>New task</title>
   </head>
   <body>
-    <form class="form">
-      <h2 class="headline">Add New</h2>
+    <form action="" class="form">
+      <h2 class="form__title">Add new</h2>
+      <input type="text" placeholder="Enter Task" class="form__input" />
 
-      <input type="text" placeholder="Enter Task" class="input__text" />
-      <h3>When</h3>
-      <div class="radio-group">
+      <h3 class="form__subtitle">When</h3>
+
+      <!-- START Radio block / component -->
+      <section class="radio-group">
         <label>
-          Today
           <input
+            class="radio-group__input"
             type="radio"
-            name="same"
+            name="date"
             value="today"
-            class="radio-group__input"
+            checked
           />
+          <span class="radio-group__title">Today</span>
         </label>
         <label>
-          Tomorrow
           <input
-            type="radio"
-            name="same"
-            value="tomorrow"
             class="radio-group__input"
+            type="radio"
+            name="date"
+            value="tommorow"
           />
+          <span class="radio-group__title">Tommorow</span>
         </label>
         <label>
-          Select date
           <input
+            class="radio-group__input"
             type="radio"
-            name="same"
+            name="date"
             value="selectDate"
-            class="radio-group__input"
           />
+          <span class="radio-group__title">Select Date</span>
         </label>
-      </div>
-      <div>
-        <div class="checklist">
-          <input type="checkbox" id="book" name="book" />
-          <label for="book">Book appointment with</label>
-        </div>
-        <div>
-          <input type="checkbox" id="upload" name="upload" />
-          <label for="book">Upload today shot on Dribble</label>
-        </div>
-        <div>
-          <input type="checkbox" id="complete" name="complete" />
-          <label for="book">Complete the Elephant Illustration</label>
-        </div>
-        <div>
-          <input type="checkbox" id="buy" name="buy" />
-          <label for="book">Buy Cake for Clair's Birthday</label>
-        </div>
-        <div>
-          <input type="checkbox" id="jared" name="jared" />
-          <label for="book">Attended UX conference with Jared</label>
-        </div>
-      </div>
+      </section>
+      <!-- END Radio block / component -->
+
+      <input type="submit" value="Add Task" class="form__submit" />
     </form>
-    <input type="submit" value="Add Task" class="form__submit" />
   </body>
 </html>
