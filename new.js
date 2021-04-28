@@ -13,5 +13,14 @@ formElement.onsubmit = function (event) {
     return;
   }
 
-  console.log(taskNameInput.value, radioGroupItem.value);
+  const task = {
+    name: taskNameInput.value,
+    date: radioGroupItem.value,
+  };
+  const taskList = JSON.parse(localStorage.getItem("taskList"));
+
+  taskList.push(task);
+  console.log(taskList);
+
+  localStorage.setItem("taskList", JSON.stringify(taskList));
 };
