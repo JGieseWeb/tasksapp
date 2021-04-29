@@ -17,13 +17,14 @@ formElement.onsubmit = function (event) {
     name: taskNameInput.value,
     date: radioGroupItem.value,
   };
+  let oldTaskList = JSON.parse(localStorage.getItem("taskList"));
+  if (oldTaskList === null) {
+    oldTaskList = [];
+  }
 
-  const taskList = JSON.parse(localStorage.getItem("taskList"));
+  oldTaskList.push(task);
 
-  taskList.push(task);
-  console.log(taskList);
-
-  localStorage.setItem("taskList", JSON.stringify(taskList));
+  localStorage.setItem("taskList", JSON.stringify(oldTaskList));
   function goToPage(href) {
     location.href = href;
   }
