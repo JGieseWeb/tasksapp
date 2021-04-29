@@ -1,8 +1,32 @@
-// alert("Wellcome on this Side");
-const submitButton = document.querySelector(".form__submit");
+const formElement = document.querySelector(".form");
+const taskNameInput = document.querySelector(".form__input");
 
-submitButton.addEventListener("click", addTask);
+formElement.onsubmit = function (event) {
+  event.preventDefault();
+  const radioGroupItem = document.querySelector(".radio-group__input:checked");
+  if (!taskNameInput.value) {
+    alert("enter Task");
+    return;
+  }
+  if (radioGroupItem == null) {
+    alert("Selct a Date");
+    return;
+  }
 
-function addTask() {
-  alert("show task");
-}
+  const task = {
+    name: taskNameInput.value,
+    date: radioGroupItem.value,
+  };
+  let oldTaskList = JSON.parse(localStorage.getItem("taskList"));
+  if (oldTaskList === null) {
+    oldTaskList = [];
+  }
+
+  oldTaskList.push(task);
+
+  localStorage.setItem("taskList", JSON.stringify(oldTaskList));
+  function goToPage(href) {
+    location.href = href;
+  }
+  goToPage("/dashbord.html");
+};
