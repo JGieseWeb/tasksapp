@@ -28,5 +28,5 @@ formElement.onsubmit = function (event) {
   function goToPage(href) {
     location.href = href;
   }
-  goToPage("/dashbord.html");
+  goToPage("/dashboard.html");
 };
